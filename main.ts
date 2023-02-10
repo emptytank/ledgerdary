@@ -4,8 +4,8 @@ function validateEmail(emailAddress: string) {
 }
 
 function validate() {
-var emailValue: string = (<HTMLInputElement>document.getElementById("entry.1917220112"))!.value;
-if (!validateEmail(emailValue)) {
+var emailValue: string = (<HTMLInputElement>document.getElementById("entry.1917220112")).value;
+if (validateEmail(emailValue)) {
     document.getElementById("entry.1917220112")!.className += "red-border formInvalid";
     alert("Please provide a valid email address.");
     document.getElementById("entry.1917220112")!.removeAttribute("formInvalid")
@@ -15,3 +15,8 @@ if (!validateEmail(emailValue)) {
 }
 
 $("#validate").on('click', validate);
+
+$('#gform').on('submit', function (e) {
+    $('#gform *').fadeOut(0);
+    $('#gform').prepend('Thank you! We will notify you with product updates!');
+}); 
