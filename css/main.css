@@ -1269,6 +1269,23 @@ video {
   --tw-gradient-to: #4338ca;
 }
 
+.to-teal-600 {
+  --tw-gradient-to: #53b79a;
+}
+
+.to-teal-700 {
+  --tw-gradient-to: #119682;
+}
+
+.hover\:from-teal-500:hover {
+  --tw-gradient-from: #6fc3ae;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(99, 102, 241, 0));
+}
+
+.hover\:to-teal-700:hover {
+  --tw-gradient-to: #119682;
+}
+
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
