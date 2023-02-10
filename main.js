@@ -11,7 +11,7 @@ function validate() {
         return false;
     }
 }
-$("#validate").on('click', function (event) { validate; });
+$("#validate").on('click', validate);
 $('#gform').on('submit', function (e) {
     $('#gform *').fadeOut(0);
     $('#gform').prepend('Thank you! We will notify you with product updates!');
