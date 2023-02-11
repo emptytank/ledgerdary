@@ -4,7 +4,7 @@ function validateEmail(emailAddress) {
 }
 function validate() {
     var emailValue = document.getElementById("entry.1917220112").value;
-    if (validateEmail(emailValue) || emailValue == null) {
+    if (validateEmail(emailValue)) {
         document.getElementById("entry.1917220112").className += "red-border formInvalid";
         alert("Please provide a valid email address.");
         document.getElementById("entry.1917220112").removeAttribute("formInvalid");
