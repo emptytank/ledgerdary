@@ -4,14 +4,16 @@ function validateEmail(emailAddress: string) {
 }
 
 function validate() {
-    const emailValue: string = $('#entry.1917220112').val() as string;
-    if (validateEmail(emailValue)) {
-        document.getElementById("entry.1917220112")!.className += "red-border formInvalid";
-        alert("Please provide a valid email address.");
-        document.getElementById("entry.1917220112")!.removeAttribute("formInvalid")
+    const emailValue: string = (<HTMLInputElement>document.getElementById("entry.1917220112")).value;
+    if (emailValue == null) {
+        alert('Please provide a valid email address.');
         return false;
     } else {
-        return true;
+        if (validateEmail(emailValue)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 

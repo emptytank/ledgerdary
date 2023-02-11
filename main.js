@@ -3,15 +3,18 @@ function validateEmail(emailAddress) {
     return re.test(emailAddress);
 }
 function validate() {
-    var emailValue = $('#entry.1917220112').val();
-    if (validateEmail(emailValue)) {
-        document.getElementById("entry.1917220112").className += "red-border formInvalid";
-        alert("Please provide a valid email address.");
-        document.getElementById("entry.1917220112").removeAttribute("formInvalid");
+    var emailValue = document.getElementById("entry.1917220112").value;
+    if (emailValue == null) {
+        alert('Please provide a valid email address.');
         return false;
     }
     else {
-        return true;
+        if (validateEmail(emailValue)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 $('#validate').on('click', validate);
