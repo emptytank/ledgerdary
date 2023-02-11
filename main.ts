@@ -5,7 +5,7 @@ function validateEmail(emailAddress: string) {
 
 function validate() {
     var emailValue: string = (<HTMLInputElement>document.getElementById("entry.1917220112")).value;
-    if (validateEmail(emailValue) || emailValue == "") {
+    if (validateEmail(emailValue) || emailValue == null) {
         document.getElementById("entry.1917220112")!.className += "red-border formInvalid";
         alert("Please provide a valid email address.");
         document.getElementById("entry.1917220112")!.removeAttribute("formInvalid")
