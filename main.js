@@ -13,6 +13,7 @@ function validate() {
             return true;
         }
         else {
+            alert('Please provide a valid email address.');
             return false;
         }
     }

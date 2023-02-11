@@ -12,6 +12,7 @@ function validate() {
         if (validateEmail(emailValue)) {
             return true;
         } else {
+            alert('Please provide a valid email address.');
             return false;
         }
     }
