@@ -1,10 +1,10 @@
 function validateEmail(emailAddress: string) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(emailAddress);
 }
 
 function validate() {
-    var emailValue: string = (<HTMLInputElement>document.getElementById("entry.1917220112")).value;
+    const emailValue: string = $('#entry.1917220112').val() as string;
     if (validateEmail(emailValue)) {
         document.getElementById("entry.1917220112")!.className += "red-border formInvalid";
         alert("Please provide a valid email address.");
