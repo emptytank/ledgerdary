@@ -21,22 +21,22 @@ const validateEmail = (email: any) => {
     );
   };
   
-  const validate = () => {
-    const $result = $('#result');
-    const email = $('#email').val();
-    $result.text('');
+const validate = () => {
+const $result = $('#result');
+const email = $('#entry.1917220112').val();
+$result.text('');
+
+if (validateEmail(email)) {
+    $result.text(email + ' is valid :)');
+    $result.css('color', 'green');
+} else {
+    $result.text(email + ' is not valid :(');
+    $result.css('color', 'red');
+}
+return false;
+}
   
-    if (validateEmail(email)) {
-      $result.text(email + ' is valid :)');
-      $result.css('color', 'green');
-    } else {
-      $result.text(email + ' is not valid :(');
-      $result.css('color', 'red');
-    }
-    return false;
-  }
-  
-  $('#email').on('input', validate);
+$('#validate').on('click', validate);
 
 $('#gform').on('submit', function (e) {
     $('#gform *').fadeOut(0);

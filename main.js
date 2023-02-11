@@ -17,7 +17,7 @@ var validateEmail = function (email) {
 };
 var validate = function () {
     var $result = $('#result');
-    var email = $('#email').val();
+    var email = $('#entry.1917220112').val();
     $result.text('');
     if (validateEmail(email)) {
         $result.text(email + ' is valid :)');
@@ -29,7 +29,7 @@ var validate = function () {
     }
     return false;
 };
-$('#email').on('input', validate);
+$('#validate').on('click', validate);
 $('#gform').on('submit', function (e) {
     $('#gform *').fadeOut(0);
     $('#gform').prepend('Thank you! We will notify you with product updates!');
