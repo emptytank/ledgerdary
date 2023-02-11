@@ -19,9 +19,7 @@ function validate() {
 
 $('#validate').on('click', validate);
 
-if (validate()) {
-    $('#gform').on('submit', () => {
-        $('#gform *').fadeOut(0);
-        $('#gform').prepend('Thank you! We will notify you with product updates!');
-    }); 
-}
+$('#gform').on('submit', () => {
+    $('#gform *').fadeOut(0);
+    $('#gform').prepend('Thank you! We will notify you with product updates!');
+});
